@@ -24,7 +24,7 @@ async function doIt() {
   const matched = files.data
     .map(_ => _.filename)
     .some(filename =>
-      paths.some(path => path.test(filename))
+      paths.some(path => path.test(filename));
       console.log(`Changed files: ${filename}`);
     );
 
