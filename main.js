@@ -23,6 +23,10 @@ async function doIt() {
   
   console.log(files.data);
   
+  for(let file of files.data){
+    console.log(file.filename);
+  }
+  
   const matched = files.data
     .map(_ => _.filename)
     .some(filename =>
