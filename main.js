@@ -21,8 +21,7 @@ async function doIt() {
 
   const files = await octokit.pulls.listFiles({owner, repo, pull_number});
   
-  files.data.forEach(i => console.log(`${i}`); );
-  
+  console.log(files.data);
   
   const matched = files.data
     .map(_ => _.filename)
