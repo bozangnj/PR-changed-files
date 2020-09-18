@@ -23,7 +23,7 @@ async function doIt() {
   
   for(file in files.data) {
     console.log(file.filename);
-}
+  }
   
   
   const matched = files.data
