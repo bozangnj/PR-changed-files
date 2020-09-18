@@ -21,7 +21,6 @@ async function doIt() {
 
   const files = await octokit.pulls.listFiles({owner, repo, pull_number});
   
-  console.log(files.data);
   
   for(let file of files.data){
     console.log(file.filename);
