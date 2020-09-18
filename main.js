@@ -35,6 +35,7 @@ async function doIt() {
   console.log(`Matched: ${matched}`);
 
   core.setOutput("matched", matched);
+  core.setOutput("pull_number", pull_number);
 
   process.exit(0);
 }
