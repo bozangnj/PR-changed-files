@@ -20,7 +20,8 @@ async function doIt() {
   console.log(`Searching for: ${paths}`);
 
   const files = await octokit.pulls.listFiles({owner, repo, pull_number});
-
+  console.log(`Changed files: ${files}`);
+  
   const matched = files.data
     .map(_ => _.filename)
     .some(filename =>
